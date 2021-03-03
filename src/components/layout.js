@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Navbar, Nav, Jumbotron } from 'react-bootstrap'
+import { Container, Navbar, Nav, Jumbotron, Button } from 'react-bootstrap'
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
@@ -58,11 +58,17 @@ const Layout = ({ location, title, children }) => {
             marginTop: 74,
             background: "#34495e"
           }}>
-          <Container>
-            <h1 className="text-white">Welcome To XXX</h1>
+          <Container fluid>
+            <h1 className={`text-white ${styles.title}`}>
+              あなたのアイデアをビジネスに<br/>
+              最初の一歩をふみだそう
+            </h1>
+            <p className={styles.subTitle}>
+              商品企画・製作・輸入・卸・OEM...<br/>
+              あらゆるニーズをすばやく、強力にサポート
+            </p>
             <p>
-              This is a modified jumbotron that occupies the entire horizontal space of
-              its parent.
+              <Button className={styles.basis} variant="primary" href="catalog">カタログを見る</Button>
             </p>
           </Container>
         </Jumbotron>
