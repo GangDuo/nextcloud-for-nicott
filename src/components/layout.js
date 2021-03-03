@@ -1,11 +1,23 @@
 import React from "react"
 import { Container, Navbar, Nav, Jumbotron } from 'react-bootstrap'
+import { useStaticQuery, graphql } from "gatsby"
 
 import styles from "./layout.module.css";
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
+  const data = useStaticQuery(graphql`
+    query LayoutQuery {
+      logo: file(absolutePath: { regex: "/logo.jpg/" }) {
+        childImageSharp {
+          fixed(width: 48, height: 48, quality: 100) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
 
   return (
     <>
