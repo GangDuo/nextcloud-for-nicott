@@ -1,18 +1,41 @@
 import React from "react"
 import { Container, Navbar, Nav, Jumbotron } from 'react-bootstrap'
+import { useStaticQuery, graphql } from "gatsby"
+import Image from "gatsby-image"
 
 import styles from "./layout.module.css";
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
+  const data = useStaticQuery(graphql`
+    query LayoutQuery {
+      logo: file(absolutePath: { regex: "/logo.jpg/" }) {
+        childImageSharp {
+          fixed(width: 48, height: 48, quality: 100) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
+  const logo = data?.logo?.childImageSharp?.fixed
 
   return (
     <>
       <header className={isRootPath ? `` : styles.globalHeader}>
         <Container>
           <Navbar collapseOnSelect fixed="top" expand="md" bg="dark" variant="dark">
-            <Navbar.Brand href="/">{title}</Navbar.Brand>
+            <Navbar.Brand href="/">
+              <Image
+                fixed={logo}
+                alt={title || ``}
+                className="d-inline-block align-top"
+                imgStyle={{
+                  borderRadius: `50%`,
+                }}
+              />
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
@@ -32,7 +55,7 @@ const Layout = ({ location, title, children }) => {
 
       {isRootPath &&
         <Jumbotron fluid className="text-white" style={{
-            marginTop: 56,
+            marginTop: 74,
             background: "#34495e"
           }}>
           <Container>
