@@ -1,7 +1,7 @@
 ---
 title: Nextcloud同期クライアントの設定
 date: "2021-03-01T13:44:00.284Z"
-description: "Hello World"
+description: "Nextcloud同期クライアントを利用するためのインストールおよびセットアップ手順を記載する。"
 ---
 
 <style>
