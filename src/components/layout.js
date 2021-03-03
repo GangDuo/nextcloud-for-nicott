@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Navbar, Nav, Jumbotron } from 'react-bootstrap'
+import { Container, Navbar, Nav, Jumbotron, Button } from 'react-bootstrap'
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
@@ -63,6 +63,9 @@ const Layout = ({ location, title, children }) => {
             <p>
               This is a modified jumbotron that occupies the entire horizontal space of
               its parent.
+            </p>
+            <p>
+              <Button variant="primary" href="catalog">カタログを見る</Button>
             </p>
           </Container>
         </Jumbotron>
