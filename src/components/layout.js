@@ -59,10 +59,13 @@ const Layout = ({ location, title, children }) => {
             background: "#34495e"
           }}>
           <Container>
-            <h1 className="text-white">Welcome To XXX</h1>
+            <h1 className="text-white">
+              あなたのアイデアをビジネスに<br/>
+              最初の一歩をふみだそう
+            </h1>
             <p>
-              This is a modified jumbotron that occupies the entire horizontal space of
-              its parent.
+              商品企画・製作・輸入・卸・OEM...<br/>
+              あらゆるニーズをすばやく、強力にサポート
             </p>
             <p>
               <Button variant="primary" href="catalog">カタログを見る</Button>
