@@ -55,7 +55,7 @@ const Layout = ({ location, title, children }) => {
 
       {isRootPath &&
         <Jumbotron fluid className="text-white" style={{
-            marginTop: 56,
+            marginTop: 74,
             background: "#34495e"
           }}>
           <Container>
