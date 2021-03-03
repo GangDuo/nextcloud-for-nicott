@@ -58,7 +58,7 @@ const Layout = ({ location, title, children }) => {
             marginTop: 74,
             background: "#34495e"
           }}>
-          <Container>
+          <Container fluid>
             <h1 className="text-white">
               あなたのアイデアをビジネスに<br/>
               最初の一歩をふみだそう
