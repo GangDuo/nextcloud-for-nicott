@@ -1,6 +1,7 @@
 import React from "react"
 import { Container, Navbar, Nav, Jumbotron } from 'react-bootstrap'
 import { useStaticQuery, graphql } from "gatsby"
+import Image from "gatsby-image"
 
 import styles from "./layout.module.css";
 
@@ -18,13 +19,23 @@ const Layout = ({ location, title, children }) => {
       }
     }
   `)
+  const logo = data?.logo?.childImageSharp?.fixed
 
   return (
     <>
       <header className={isRootPath ? `` : styles.globalHeader}>
         <Container>
           <Navbar collapseOnSelect fixed="top" expand="md" bg="dark" variant="dark">
-            <Navbar.Brand href="/">{title}</Navbar.Brand>
+            <Navbar.Brand href="/">
+              <Image
+                fixed={logo}
+                alt={title || ``}
+                className="d-inline-block align-top"
+                imgStyle={{
+                  borderRadius: `50%`,
+                }}
+              />
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
