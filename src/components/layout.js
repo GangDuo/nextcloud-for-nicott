@@ -36,6 +36,14 @@ const Layout = ({ location, title, children }) => {
                 }}
               />
             </Navbar.Brand>
+            <Button href="request-documents/"
+              variant="outline-info"
+              style={{
+                color: "#fff",
+                borderColor: "#fff"
+              }}>
+              資料請求
+            </Button>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
