@@ -59,16 +59,16 @@ const Layout = ({ location, title, children }) => {
             background: "#34495e"
           }}>
           <Container fluid>
-            <h1 className="text-white">
+            <h1 className={`text-white ${styles.title}`}>
               あなたのアイデアをビジネスに<br/>
               最初の一歩をふみだそう
             </h1>
-            <p>
+            <p className={styles.subTitle}>
               商品企画・製作・輸入・卸・OEM...<br/>
               あらゆるニーズをすばやく、強力にサポート
             </p>
             <p>
-              <Button variant="primary" href="catalog">カタログを見る</Button>
+              <Button className={styles.basis} variant="primary" href="catalog">カタログを見る</Button>
             </p>
           </Container>
         </Jumbotron>
