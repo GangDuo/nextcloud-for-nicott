@@ -86,11 +86,10 @@ const Layout = ({ location, title, children }) => {
         <main>{children}</main>
       </div>
       <footer className="text-center bg-dark text-white">
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-
         <Container>
+          <Row>
+            <Col>© {new Date().getFullYear()} Nicott inc. All rights reserved.</Col>
+          </Row>
           <Row>
             <Col>株式会社ニコット　群馬県佐波郡玉村町八幡原2027-1</Col>
           </Row>
