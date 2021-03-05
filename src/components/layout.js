@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Navbar, Nav, Jumbotron, Button } from 'react-bootstrap'
+import { Container, Navbar, Nav, Jumbotron, Button, Row, Col } from 'react-bootstrap'
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
@@ -89,6 +89,15 @@ const Layout = ({ location, title, children }) => {
         © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
+
+        <Container>
+          <Row>
+            <Col>株式会社ニコット　群馬県佐波郡玉村町八幡原2027-1</Col>
+          </Row>
+          <Row>
+            <Col>TEL:　0270-75-5820</Col>
+          </Row>
+        </Container>
       </footer>
     </>
   )
