@@ -47,13 +47,13 @@ const Layout = ({ location, title, children }) => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
-                <Nav.Link href="#features">Features</Nav.Link>
-                <Nav.Link href="#pricing">Pricing</Nav.Link>
+                <Nav.Link href="/services/">サービス</Nav.Link>
+                <Nav.Link href="/pricing/">価格</Nav.Link>
               </Nav>
               <Nav>
                 <Nav.Link href="/company/overview/">会社概要</Nav.Link>
-                <Nav.Link eventKey={2} href="#memes">
-                  Dank memes
+                <Nav.Link eventKey={2} href="/support/">
+                  サポート
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>
